@@ -1,7 +1,22 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Product.destroy_all
+
+Product.create!([{
+  name: "Maven of Moxie Dress",
+  price: 139.99,
+  size: nil,
+  color: "Green"
+},
+{
+  name: "Head of the Room Dress",
+  price: 44.99,
+  size:  nil,
+  color: "Peach"
+},
+{
+  name: "Perfect Pour Dress",
+  price: 59.99,
+  size: nil,
+  color: "Brown"
+}])
+
+p "Created #{Product.count} products"
