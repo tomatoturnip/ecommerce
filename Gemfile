@@ -23,7 +23,17 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'dotenv-rails'
 end
 
-gem 'devise'
+
+gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-foursquare'
+gem 'omniauth-twitter'
+gem 'omniauth-linkedin'
+
+
+gem 'simple_form'
+gem 'country_select'
+gem 'newrelic_rpm'
