@@ -20,3 +20,4 @@
 capybara-*.html
 
 .env
+.pem
