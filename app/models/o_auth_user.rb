@@ -1,5 +1,6 @@
 class OAuthUser
 
+  attr_reader :user
   def initialize(creds, user = nil)
     @auth     = creds
     @user     = user
@@ -18,7 +19,7 @@ class OAuthUser
   private
 
   def login
-    @account = Account.where(@auth.slice("provider", "uid")).first
+    @account = Account.where(provider: @auth['provider'], uid: @auth['uid']).first
     if @account.present?
       refresh_tokens
       @user = @account.user
@@ -52,16 +53,15 @@ class OAuthUser
     @user = User.create!(
       :first_name => @policy.first_name,
       :last_name => @policy.last_name,
-      :email => @policy.email,
-      :picture => image
+      :email => @policy.email
     )
   end
 
-  def image
-   image = open(URI.parse(@policy.image_url), :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)
-    def image.original_filename; base_uri.path.split('/').last; end
-    image
-  end
+  # def image
+  #  image = open(URI.parse(@policy.image_url), :ssl_verify_mode => OpenSSL::SSL::VERIFY_NONE)
+  #   def image.original_filename; base_uri.path.split('/').last; end
+  #   image
+  # end
 
    def refresh_tokens
     @account.update_attributes(

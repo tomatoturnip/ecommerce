@@ -21,7 +21,7 @@ class FacebookPolicy
   end
 
   def image_url
-    "http://graph.facebook.com/#{auth.info.nickname}/picture?type=large"
+    "http://graph.facebook.com/#{@auth.info.nickname}/picture?type=large"
   end
 
   def uid
@@ -44,7 +44,7 @@ class FacebookPolicy
     # Place mmethods you want to trigger on Facebook Oauth creation here
   end
 
-  def refresh_call(account)
+  def refresh_callback(account)
     # Place any methods you want to trigger on subsequent Facebook OAuth logins here
   end
 
