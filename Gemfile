@@ -30,9 +30,8 @@ end
 
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-foursquare'
 gem 'omniauth-twitter'
-gem 'omniauth-linkedin'
+gem 'bcrypt', '~> 3.1.7'
 
 
 gem 'simple_form'
