@@ -20,9 +20,9 @@ class TwitterPolicy
     @auth.info.nickname
   end
 
-  def image_url
-    "https://api.twitter.com/1/users/profile_image?screen_name=#{@auth.info.nickname}&size=original"
-  end
+  # def image_url
+  #   "https://api.twitter.com/1/users/profile_image?screen_name=#{@auth.info.nickname}&size=original"
+  # end
 
   def uid
     @auth.uid

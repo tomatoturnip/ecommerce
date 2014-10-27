@@ -8,12 +8,7 @@ class User < ActiveRecord::Base
   end
 
   def has_twitter?
-    accounts.where(provider: 'facebook').any?
+    accounts.where(provider: 'twitter').any?
   end
-
-  def has_foursquare?
-    accounts.where(provider: 'foursquare').any?
-  end
-
 
 end
