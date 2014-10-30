@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
     accounts.where(provider: 'facebook').any?
   end
 
-  def has_twitter?
-    accounts.where(provider: 'twitter').any?
+  def has_google?
+    accounts.where(provider: 'google').any?
   end
 
 end

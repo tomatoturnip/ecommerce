@@ -31,6 +31,7 @@ end
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
 gem 'bcrypt', '~> 3.1.7'
 
 

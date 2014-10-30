@@ -13,16 +13,16 @@ class FacebookPolicy
   end
 
   def email
-    @auth.info.last_name
+    @auth.info.email
   end
 
   def username
     @auth.info.nickname
   end
 
-  def image_url
-    "http://graph.facebook.com/#{@auth.info.nickname}/picture?type=large"
-  end
+  # def image_url
+  #   "http://graph.facebook.com/#{@auth.info.nickname}/picture?type=large"
+  # end
 
   def uid
     @auth.uid
